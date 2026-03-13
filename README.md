@@ -48,58 +48,10 @@ El analisis lexico fue implementado manualmente mediante un recorrido caracter p
 
 ---
 
+
+
 # 3. Gramatica Formal (BNF)
 # Lenguaje Aritmetico Nativo
-
-## 1. Descripcion General
-
-Se desarrollo un lenguaje aritmetico nativo orientado a la evaluacion de expresiones matematicas basicas. 
-El lenguaje fue implementado completamente desde cero sin utilizar generadores automaticos de analizadores lexicos o sintacticos.
-
-Operaciones soportadas:
-
-- Suma (+)
-- Resta (-)
-- Multiplicacion (*)
-- Division (/)
-- Parentesis
-
----
-
-# 2. Analisis Lexico
-
-## 2.1 Alfabeto
-
-Σ = { 0–9, +, -, *, /, (, ), espacio }
-
-## 2.2 Tokens
-
-- NUM
-- PLUS
-- MINUS
-- MULT
-- DIV
-- LPAREN
-- RPAREN
-- EOF
-
-## 2.3 Expresiones Regulares Conceptuales
-
-NUM → [0-9]+ 
-PLUS → "+" 
-MINUS → "-" 
-MULT → "*" 
-DIV → "/" 
-LPAREN → "(" 
-RPAREN → ")"
-
-## 2.4 Implementacion
-
-El analisis lexico fue implementado manualmente mediante un recorrido caracter por caracter, funcionando como un Automata Finito Determinista implicito.
-
----
-
-# 3. Gramatica Formal (BNF)
 <expresion> ::= <termino> { ("+" | "-") <termino> }
 
 <termino> ::= <factor> { ("*" | "/") <factor> }
